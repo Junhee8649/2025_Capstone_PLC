@@ -39,8 +39,8 @@ class VarProcessRepositoryImpl @Inject constructor(
         // 실시간 데이터 시뮬레이션: 1초마다 새 데이터 추가
         var currentIndex = 0
         while (currentIndex < allData.size) {
-            // 최근 100개 데이터만 유지 (그래프 성능 고려)
-            val startIndex = maxOf(0, currentIndex - 99)
+            // 슬라이딩 윈도우: 최근 6개 데이터만 유지 (실시간 모니터링, 항상 화면에 표시)
+            val startIndex = maxOf(0, currentIndex - 5)
             emit(allData.subList(startIndex, currentIndex + 1))
             currentIndex++
             delay(1000) // 1초 간격
