@@ -2,9 +2,9 @@ package com.github.junhee8649.plc
 
 import PLCDestinations
 import PLCNavigationActions
-import android.window.SplashScreen
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
+import androidx.compose.material3.windowsizeclass.WindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -15,6 +15,7 @@ import com.github.junhee8649.plc.ui.main.MainScreen
 
 @Composable
 fun PLCNavGraph(
+    windowSizeClass: WindowSizeClass,
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
     navActions: PLCNavigationActions = PLCNavigationActions(navController),
@@ -30,7 +31,7 @@ fun PLCNavGraph(
         popExitTransition = { ExitTransition.None }
     ) {
         composable(route = PLCDestinations.MAIN_ROUTE) {
-            MainScreen()
+            MainScreen(windowSizeClass = windowSizeClass)
         }
     }
 }

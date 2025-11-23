@@ -22,7 +22,7 @@ androidxWindowManager = "1.5.0"
 androidxWork = "2.10.5"
 coil = "2.7.0"
 # @keep
-compileSdk = "35"
+compileSdk = "36"
 espressoCore = "3.7.0"
 firebaseBom = "34.4.0"
 hilt = "2.54"
@@ -47,6 +47,7 @@ retrofitKotlinxSerializationJson = "0.8.0"
 room = "2.7.1"
 spotless = "5.12.5"
 timber = "5.0.1"
+vico = "2.3.6"
 # @keep
 targetSdk = "35"
 
@@ -111,6 +112,8 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+vico-compose = { group = "com.patrykandpatrick.vico", name = "compose", version.ref = "vico" }
+vico-compose-m3 = { group = "com.patrykandpatrick.vico", name = "compose-m3", version.ref = "vico" }
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
